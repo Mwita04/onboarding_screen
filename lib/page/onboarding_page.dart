@@ -54,7 +54,7 @@ class OnBoardingPage extends StatelessWidget {
           //isProgress: true, // Make the bubbles appear or disappear
           //showNextButton: true, // Makes the Next button appear and disappear
           //freeze: false,
-          animationDuration: 500,
+          animationDuration: 700,
         ),
       );
 
@@ -81,6 +81,6 @@ class OnBoardingPage extends StatelessWidget {
         bodyTextStyle: TextStyle(fontSize: 20),
         descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
         imagePadding: EdgeInsets.all(24),
-        pageColor: Colors.white,
+        pageColor: Colors.blueGrey[300],
       );
 }
