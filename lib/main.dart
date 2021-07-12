@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_declarations
+
 import 'package:flutter/material.dart';
 import 'package:onboarding_screen/page/onboarding_page.dart';
 
