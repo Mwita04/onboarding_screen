@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding_screen_example/main.dart';
-import 'package:onboarding_screen_example/page/onboarding_page.dart';
-import 'package:onboarding_screen_example/widget/button_widget.dart';
+import 'package:onboarding_screen/main.dart';
+import 'package:onboarding_screen/page/onboarding_page.dart';
+import 'package:onboarding_screen/widget/button_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
