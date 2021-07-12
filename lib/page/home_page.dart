@@ -17,12 +17,12 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'HomePage',
+                'Mwita\'s Library',
                 style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 24),
               ButtonWidget(
-                text: 'Go Back',
+                text: 'Home',
                 onClicked: () => goToOnBoarding(context),
               ),
             ],
