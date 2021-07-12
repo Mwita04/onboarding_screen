@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:onboarding_screen/page/home_page.dart';
@@ -46,15 +44,17 @@ class OnBoardingPage extends StatelessWidget {
           onSkip: () => goToHome(context),
           next: Icon(Icons.arrow_forward),
           dotsDecorator: getDotDecoration(),
-          onChange: (index) => print('Page $index selected'),
-          globalBackgroundColor: Theme.of(context).primaryColor,
-          skipFlex: 0,
-          nextFlex: 0,
-          //isProgressTap: true,
-          //isProgress: true,
-          //showNextButton: true,
+          onChange: (index) => print(
+              'Page $index selected'), // prints users screen activity on debug console
+          globalBackgroundColor: Theme.of(context)
+              .primaryColor, //Sets primary color to be used at the far left and right
+          //skipFlex: 0,
+          //nextFlex: 0,
+          //isProgressTap: false, // restricts swipes using bubbles
+          //isProgress: true, // Make the bubbles appear or disappear
+          //showNextButton: true, // Makes the Next button appear and disappear
           //freeze: false,
-          // animationDuration: 1000,
+          animationDuration: 500,
         ),
       );
 
@@ -65,9 +65,10 @@ class OnBoardingPage extends StatelessWidget {
   Widget buildImage(String path) =>
       Center(child: Image.asset(path, width: 350));
 
+// For the dots at the bpttom of the screen.
   DotsDecorator getDotDecoration() => DotsDecorator(
         //color: Color(0xFFBDBDBD),
-        activeColor: Colors.orange,
+        activeColor: Colors.greenAccent,
         size: Size(10, 10),
         activeSize: Size(22, 10),
         activeShape: RoundedRectangleBorder(
@@ -80,6 +81,6 @@ class OnBoardingPage extends StatelessWidget {
         bodyTextStyle: TextStyle(fontSize: 20),
         descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
         imagePadding: EdgeInsets.all(24),
-        pageColor: Colors.blue,
+        pageColor: Colors.white,
       );
 }
