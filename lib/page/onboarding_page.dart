@@ -50,13 +50,13 @@ class OnBoardingPage extends StatelessWidget {
               'Page $index selected'), // prints users screen activity on debug console
           globalBackgroundColor: Theme.of(context)
               .primaryColor, //Sets primary color to be used at the far left and right
-          //skipFlex: 0,
-          //nextFlex: 0,
+          skipFlex: 0,
+          nextFlex: 0,
           //isProgressTap: false, // restricts swipes using bubbles
           //isProgress: true, // Make the bubbles appear or disappear
           //showNextButton: true, // Makes the Next button appear and disappear
           //freeze: false,
-          animationDuration: 700,
+          //animationDuration: 700,
         ),
       );
 
@@ -69,9 +69,8 @@ class OnBoardingPage extends StatelessWidget {
 
 // For the dots at the bpttom of the screen.
   DotsDecorator getDotDecoration() => DotsDecorator(
-        //color: Color(0xFFBDBDBD),
-        activeColor: Colors.greenAccent,
-        size: Size(10, 10),
+        color: Color(0xFFBDBDBD),
+        size: Size(10, 8),
         activeSize: Size(22, 10),
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
@@ -83,6 +82,6 @@ class OnBoardingPage extends StatelessWidget {
         bodyTextStyle: TextStyle(fontSize: 20),
         descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
         imagePadding: EdgeInsets.all(24),
-        pageColor: Colors.blueGrey[300],
+        pageColor: Colors.white,
       );
 }
