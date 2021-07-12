@@ -70,6 +70,7 @@ class OnBoardingPage extends StatelessWidget {
 // For the dots at the bpttom of the screen.
   DotsDecorator getDotDecoration() => DotsDecorator(
         color: Color(0xFFBDBDBD),
+        //activeColor: Colors.orange,
         size: Size(10, 8),
         activeSize: Size(22, 10),
         activeShape: RoundedRectangleBorder(
