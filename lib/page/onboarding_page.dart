@@ -10,7 +10,7 @@ class OnBoardingPage extends StatelessWidget {
           pages: [
             PageViewModel(
               title: 'A reader lives a thousand lives',
-              body: 'The man who never reads lives only one.',
+              body: 'The man who never reads lives only once.',
               image: buildImage('assets/ebook.png'),
               decoration: getPageDecoration(),
             ),
