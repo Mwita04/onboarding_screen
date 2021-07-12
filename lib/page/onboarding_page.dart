@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:onboarding_screen/page/home_page.dart';
@@ -48,10 +50,10 @@ class OnBoardingPage extends StatelessWidget {
           globalBackgroundColor: Theme.of(context).primaryColor,
           skipFlex: 0,
           nextFlex: 0,
-          // isProgressTap: false,
-          // isProgress: false,
-          // showNextButton: false,
-          // freeze: true,
+          isProgressTap: true,
+          //isProgress: true,
+          showNextButton: true,
+          //freeze: false,
           // animationDuration: 1000,
         ),
       );
@@ -64,8 +66,8 @@ class OnBoardingPage extends StatelessWidget {
       Center(child: Image.asset(path, width: 350));
 
   DotsDecorator getDotDecoration() => DotsDecorator(
-        color: Color(0xFFBDBDBD),
-        //activeColor: Colors.orange,
+        //color: Color(0xFFBDBDBD),
+        activeColor: Colors.orange,
         size: Size(10, 10),
         activeSize: Size(22, 10),
         activeShape: RoundedRectangleBorder(
@@ -78,6 +80,6 @@ class OnBoardingPage extends StatelessWidget {
         bodyTextStyle: TextStyle(fontSize: 20),
         descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
         imagePadding: EdgeInsets.all(24),
-        pageColor: Colors.white,
+        pageColor: Colors.blue,
       );
 }
