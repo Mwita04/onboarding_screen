@@ -2,7 +2,7 @@
 
 //Feel free to update and let me know what comes of this.
 
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, avoid_print
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, avoid_print, import_of_legacy_library_into_null_safe
 
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
