@@ -52,15 +52,16 @@ class OnBoardingPage extends StatelessWidget {
           dotsDecorator: getDotDecoration(),
           onChange: (index) => print(
               'Page $index selected'), // prints users screen activity on debug console
-          globalBackgroundColor: Theme.of(context)
-              .primaryColor, //Sets primary color to be used at the far left and right
-          skipFlex: 0,
+          globalBackgroundColor: Colors.blue[
+              400], //Sets primary color to be used at the far left and right
+          skipFlex: 0, // Gives the Skip and Next icons spacing
           nextFlex: 0,
-          //isProgressTap: false, // restricts swipes using bubbles
-          //isProgress: true, // Make the bubbles appear or disappear
-          //showNextButton: true, // Makes the Next button appear and disappear
-          //freeze: false,
-          //animationDuration: 700,
+          isProgressTap: false, // restricts swipes using bubbles
+          isProgress:
+              true, // Make the bubbles appear or disappear from the progress bar
+          showNextButton: true, // Makes the Next button appear and disappear
+          //freeze: true, // Restricts User swipe screen
+          animationDuration: 800,
         ),
       );
 
@@ -74,9 +75,11 @@ class OnBoardingPage extends StatelessWidget {
 // For the dots at the bpttom of the screen.
   DotsDecorator getDotDecoration() => DotsDecorator(
         color: Color(0xFFBDBDBD),
-        activeColor: Colors.black,// Sets Color For the current page dot
-        size: Size(8, 8),// Change size of the dots to your preference
-        activeSize: Size(15, 10),// Changes size for the current page dot
+        activeColor: Colors
+            .black, // Sets Color For the current page dot/bubble at the bottom
+        size: Size(8, 8), // Change size of the dots to your preference
+        activeSize: Size(15,
+            10), // Changes size for the current page dot/buble at the bottom
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
