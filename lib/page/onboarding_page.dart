@@ -1,6 +1,6 @@
-// This was quite challenging,informative,educational annd above all worth it.
+// This was quite challenging,informative,educational and above all worth it.
 
-//Feel free to update and let me know what comes of this.
+//Feel free to update, modify and let me know what comes of this.
 
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, avoid_print, import_of_legacy_library_into_null_safe
 
@@ -74,9 +74,9 @@ class OnBoardingPage extends StatelessWidget {
 // For the dots at the bpttom of the screen.
   DotsDecorator getDotDecoration() => DotsDecorator(
         color: Color(0xFFBDBDBD),
-        //activeColor: Colors.orange,
-        size: Size(10, 8),
-        activeSize: Size(22, 10),
+        activeColor: Colors.black,// Sets Color For the current page dot
+        size: Size(8, 8),// Change size of the dots to your preference
+        activeSize: Size(15, 10),// Changes size for the current page dot
         activeShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
