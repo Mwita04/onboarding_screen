@@ -90,7 +90,7 @@ class OnBoardingPage extends StatelessWidget {
           isProgressTap: false, // restricts swipes using bubbles
           isProgress:true, // Make the bubbles appear or disappear from the progress bar
           showNextButton: true, // Makes the Next button appear and disappear
-          freeze: true, // Restricts User swipe screen
+          freeze: false, // Restricts User swipe screen
           animationDuration: 800,
         ),
       );
