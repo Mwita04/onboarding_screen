@@ -1,5 +1,8 @@
 // This was quite challenging,informative,educational and above all worth it.
 
+// Incase of issues with null safety, run with:
+// dart --no-sound-null-safety run
+//flutter run --no-sound-null-safety
 //Feel free to update, modify and let me know what comes of this.
 
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, avoid_print, import_of_legacy_library_into_null_safe
@@ -10,6 +13,34 @@ import 'package:onboarding_screen/page/home_page.dart';
 import 'package:onboarding_screen/widget/button_widget.dart';
 
 class OnBoardingPage extends StatelessWidget {
+  void goToHome(context) => Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => HomePage()),
+      );
+
+  Widget buildImage(String path) =>
+      Center(child: Image.asset(path, width: 350));
+
+// For the dots at the bpttom of the screen.
+  DotsDecorator getDotDecoration() => DotsDecorator(
+        color: Color(0xFFBDBDBD),
+        activeColor: Colors
+            .black, // Sets Color For the current page dot/bubble at the bottom
+        size: Size(8, 8), // Change size of the dots to your preference
+        activeSize: Size(15,
+            10), // Changes size for the current page dot/buble at the bottom
+        activeShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+      );
+
+  PageDecoration getPageDecoration() => PageDecoration(
+        titleTextStyle: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+        bodyTextStyle: TextStyle(fontSize: 20),
+        descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
+        imagePadding: EdgeInsets.all(24),
+        pageColor: Colors.white,
+      );
+
   @override
   Widget build(BuildContext context) => SafeArea(
         child: IntroductionScreen(
@@ -63,33 +94,5 @@ class OnBoardingPage extends StatelessWidget {
           //freeze: true, // Restricts User swipe screen
           animationDuration: 800,
         ),
-      );
-
-  void goToHome(context) => Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => HomePage()),
-      );
-
-  Widget buildImage(String path) =>
-      Center(child: Image.asset(path, width: 350));
-
-// For the dots at the bpttom of the screen.
-  DotsDecorator getDotDecoration() => DotsDecorator(
-        color: Color(0xFFBDBDBD),
-        activeColor: Colors
-            .black, // Sets Color For the current page dot/bubble at the bottom
-        size: Size(8, 8), // Change size of the dots to your preference
-        activeSize: Size(15,
-            10), // Changes size for the current page dot/buble at the bottom
-        activeShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
-        ),
-      );
-
-  PageDecoration getPageDecoration() => PageDecoration(
-        titleTextStyle: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-        bodyTextStyle: TextStyle(fontSize: 20),
-        descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
-        imagePadding: EdgeInsets.all(24),
-        pageColor: Colors.white,
       );
 }
