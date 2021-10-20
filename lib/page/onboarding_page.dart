@@ -88,8 +88,7 @@ class OnBoardingPage extends StatelessWidget {
           skipFlex: 0, // Gives the Skip and Next icons spacing
           nextFlex: 0,
           isProgressTap: false, // restricts swipes using bubbles
-          isProgress:
-              true, // Make the bubbles appear or disappear from the progress bar
+          isProgress:true, // Make the bubbles appear or disappear from the progress bar
           showNextButton: true, // Makes the Next button appear and disappear
           //freeze: true, // Restricts User swipe screen
           animationDuration: 800,
